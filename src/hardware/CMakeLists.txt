@@ -1,0 +1,6 @@
+add_library(gds_hardware INTERFACE)
+
+target_include_directories(gds_hardware INTERFACE ${CMAKE_CURRENT_LIST_DIR}/include)
+target_link_libraries(gds_hardware INTERFACE pico_stdlib hardware_pwm pico_cyw43_arch_none)
+
+add_subdirectory(boards)
