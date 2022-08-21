@@ -21,14 +21,15 @@ pico_sdk_init()
 add_executable(gds_tank src/main.c)
 add_subdirectory(src)
 
-target_link_libraries(gds_tank pico_stdlib gds_hardware gds_alpha_board)
+
+target_link_libraries(gds_tank pico_stdlib pico_multicore gds_hardware gds_core gds_core_comms gds_core_pilot gds_alpha_board)
 
 pico_set_program_name(gds_tank "gds_tank")
 pico_set_program_version(gds_tank "0.1")
 
 
-pico_enable_stdio_uart(gds_tank 1)
-pico_enable_stdio_usb(gds_tank 0)
+pico_enable_stdio_uart(gds_tank 0)
+pico_enable_stdio_usb(gds_tank 1)
 
 pico_add_extra_outputs(gds_tank)
 

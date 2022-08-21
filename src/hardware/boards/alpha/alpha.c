@@ -62,8 +62,6 @@ board_init_result_t board_init()
     pwm_init(pwm_slice_motor_l, &config, true);
     pwm_init(pwm_slice_motor_r, &config, true);
 
-    cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, 1);
-
     motor_t left_motor = motor_driver_init((motor_config_t){
         .pwm_slice = pwm_slice_motor_l,
         .pwm_channel = MOTOR_L_PWM_CHANNEL,
