@@ -1,1 +1,0 @@
-#include "gds_tank/pilot/pilot.h"

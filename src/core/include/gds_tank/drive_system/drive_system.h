@@ -5,7 +5,9 @@
 #ifndef GDS_TANK_PILOT_H
 #define GDS_TANK_PILOT_H
 
-void pilot_init();
-void pilot_control_task();
+#include "gds_tank/boards/board.h"
+
+void drive_system_init(board_init_result_t result);
+void drive_system_rotate
 
 #endif //GDS_TANK_PILOT_H
